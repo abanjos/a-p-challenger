@@ -6,6 +6,7 @@
     "pokeapi-js-wrapper": "^1.1.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-poke-sprites": "0.0.6",
     "react-scripts": "1.1.4"
   },
   "scripts": {
