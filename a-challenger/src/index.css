@@ -40,6 +40,49 @@ html {
   margin-bottom: 3px;
 }
 
+.StatBar {
+  height: 15px;
+  width: 255px;
+  display: inline-block;
+  
+}
+
+.StatBar > span {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.StatBar-low {
+  background: #DC4B5F;
+}
+
+.StatBar-medium-low {
+  background: #faa056;
+}
+
+.StatBar-medium {
+  background: #f9fa56;
+}
+
+.StatBar-medium-high {
+  background: #aefa56;
+}
+
+.StatBar-high {
+  background: #5de533;
+}
+
+.StatBar-very-high {
+  background: #33e5ab;
+}
+
+.PokemonStats-list {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+
 .normalType {
   background: #d1d2d3;
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
+import StatBar from './StatBar'
+
 class PokemonStats extends Component {
   constructor(props){
     super(props)
-
-    console.log(this.props.stats)
     
   }
 
@@ -24,13 +24,15 @@ class PokemonStats extends Component {
         return "HP"  
       default:
         return statName
-
     }
-  } 
+  }
 
   createPokemonStats(){
     return this.props.stats.map(stat => 
-      <li key={stat.stat.name}>{this.formatOutput(stat.stat.name)}: {stat.base_stat}</li>
+      <li key={stat.stat.name}>{this.formatOutput(stat.stat.name)}:
+        <strong>{stat.base_stat}</strong>&nbsp;
+        <StatBar statValue={stat.base_stat} />
+      </li>
     )
   }
 
@@ -39,8 +41,8 @@ class PokemonStats extends Component {
     let pokemonStats = this.createPokemonStats()
 
     return (      
-      <div>
-        <ul>{pokemonStats}</ul>
+      <div className="PokemonStats">
+        <ul className="PokemonStats-list">{pokemonStats}</ul>
       </div>
     );
   }
