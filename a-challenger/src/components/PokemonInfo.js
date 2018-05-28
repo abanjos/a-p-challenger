@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-
+import PokemonTypeList from './PokemonTypeList'
 
 class PokemonInfo extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class PokemonInfo extends Component {
                 .then(data => this.setState({ 
                     name: data.name,
                     number: data.order,
-                    type: data.types,
+                    types: data.types,
                     stats: data.stats,
                     abilities: data.abilities,
                     sprites: data.sprites
@@ -50,10 +50,10 @@ class PokemonInfo extends Component {
     return (      
         <div>
             <h1>#{this.state.number} {this.state.name.toUpperCase()}</h1>
-            <PokemonType types={this.state.types} />
-            <PokeSprite  pokemon={this.props.name} />
-            <PokemonStats stats={this.props.stats} />
-            <PokemonAbilities abilities={this.props.abilities} />
+            <PokemonTypeList types={this.state.types} />
+           
+            
+            
         </div>
     )    
   }
