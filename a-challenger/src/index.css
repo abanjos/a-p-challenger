@@ -1,0 +1,112 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.PokemonButton {
+  border-radius: 50%;
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  margin: 3px;
+}
+
+@media (min-width: 1200px){
+  #root {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+}
+
+/*TYPES*/
+
+.Type {
+  /* estilos base */
+}
+
+.NormalType {
+  background: #d1d2d3;
+}
+
+.FireType {
+  background: #ff8c35;
+}
+
+.WaterType {
+  background: #34b4ff;
+}
+
+.ElectricType {
+  background: #f0f731;
+}
+
+.GrassType {
+  background: #65f730;
+}
+
+.FightType {
+  background: #65f730;
+}
+
+.PoisonType {
+  background: #aa5dcc;
+}
+
+.GroundType {
+  background: #d6ba57;
+}
+
+.FlyingType {
+  background: #57add6;
+}
+
+.PsychicType {
+  background: #ff7aef;
+}
+
+.BugType {
+  background: #b3ce52;
+}
+
+.RockType {
+  background: #baa24c;
+}
+
+.GhostType {
+  background: #4757bc;
+}
+
+.DragonType {
+  background: #8266ff;
+}
+
+.SteelType {
+  background: #e0e0e0;
+}
+
+.DarkType {
+  background: #3d1f00;
+}
+
+
+.FairyType {
+  background: #ffbaf8;
+}
