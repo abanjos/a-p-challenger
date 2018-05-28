@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 class PokemonType extends Component {
   constructor(props){
     super(props)
-
-    console.log(this.props.types)
-
   }
 
   render() {
