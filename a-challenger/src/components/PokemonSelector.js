@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import PokemonButton from './PokemonButton'
+import PaginationButton from './PaginationButton'
 
 const api = 'https://pokeapi.co/api/v2'
 
@@ -14,24 +15,39 @@ class PokemonSelector extends Component {
       next: null,
       list: []
     }
+    this.getPokemonList(`${api}/pokemon`)
   } 
   
-  componentDidMount() {
-    const url = this.state.actual == null ? `${api}/pokemon` : this.state.actual
+  getPokemonList = (url) => {
     fetch(url)
       .then(response => response.json())
-      .then(data => this.setState({ actual: url, previous: data.previous, next: data.next, list: data.results }))
-  }
-
-  async getPokemonsList() {
-    return fetch(`${api}pokemon`)
-      .then(response => response.json())
+      .then(data => { 
+        this.setState(
+          { actual: url, previous: data.previous, next: data.next, list: data.results }
+        )
+      })
   }
 
   createPokemonButtons() {
     return this.state.list.map(pokemon =>
       <PokemonButton key={pokemon.name} url={pokemon.url} /> 
     )
+  }
+
+  handlePreviuous = (e) => {
+    e.preventDefault()
+    if(this.state.previous !== null) {
+      this.setState({ actual: this.state.previous })
+      this.getPokemonList(this.state.previous)
+    }
+  }
+
+  handleNext = (e) => {
+    e.preventDefault()
+    if(this.state.next !== null) {
+      this.setState({ actual: this.state.next })
+      this.getPokemonList(this.state.next)
+    }
   }
 
   render() {
@@ -41,6 +57,10 @@ class PokemonSelector extends Component {
     return (
       <div className="Pokemon-Selector">
         {pokemonButtons}
+        <div class="PaginationButtonGrid">
+          <PaginationButton className="PaginationButtonPrevious" text="Previous" url={this.state.previous} onClickHandler={(e) => this.handlePreviuous(e)} />
+          <PaginationButton className="PaginationButtonNext" text="Next" url={this.state.next} onClickHandler={(e) => this.handleNext(e)} />
+        </div>
       </div>
     )
   }
