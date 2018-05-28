@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import PokemonTypeList from './PokemonTypeList'
+import PokemonStats from './PokemonStats'
 
 class PokemonInfo extends Component {
     constructor(props) {
@@ -42,7 +43,6 @@ class PokemonInfo extends Component {
     }
 
 
-
   render() { 
     if(this.state.isLoading)
         return (<div></div>)
@@ -51,7 +51,7 @@ class PokemonInfo extends Component {
         <div>
             <h1>#{this.state.number} {this.state.name.toUpperCase()}</h1>
             <PokemonTypeList types={this.state.types} />
-           
+            <PokemonStats stats={this.state.stats} />
             
             
         </div>
