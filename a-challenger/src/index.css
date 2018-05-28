@@ -42,71 +42,71 @@ html {
   /* estilos base */
 }
 
-.NormalType {
+.normalType {
   background: #d1d2d3;
 }
 
-.FireType {
+.fireType {
   background: #ff8c35;
 }
 
-.WaterType {
+.waterType {
   background: #34b4ff;
 }
 
-.ElectricType {
+.electricType {
   background: #f0f731;
 }
 
-.GrassType {
+.grassType {
   background: #65f730;
 }
 
-.FightType {
+.fightType {
   background: #65f730;
 }
 
-.PoisonType {
+.poisonType {
   background: #aa5dcc;
 }
 
-.GroundType {
+.groundType {
   background: #d6ba57;
 }
 
-.FlyingType {
+.flyingType {
   background: #57add6;
 }
 
-.PsychicType {
+.psychicType {
   background: #ff7aef;
 }
 
-.BugType {
+.bugType {
   background: #b3ce52;
 }
 
-.RockType {
+.rockType {
   background: #baa24c;
 }
 
-.GhostType {
+.ghostType {
   background: #4757bc;
 }
 
-.DragonType {
+.dragonType {
   background: #8266ff;
 }
 
-.SteelType {
+.steelType {
   background: #e0e0e0;
 }
 
-.DarkType {
+.darkType {
   background: #3d1f00;
 }
 
 
-.FairyType {
+.fairyType {
   background: #ffbaf8;
 }
