@@ -26,7 +26,7 @@ class StatBar extends Component {
 
   render() {
 
-    const statPercentage = this.calculateStatPercent(this.props.statValue, 255)
+    const statPercentage = this.calculateStatPercent(this.props.statValue, 230)
 
     return (      
       <div className="StatBar">
