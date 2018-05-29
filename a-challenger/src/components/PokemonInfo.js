@@ -54,11 +54,10 @@ class PokemonInfo extends Component {
             <h2>#{this.state.number} {this.state.name.toUpperCase()}</h2>
             <PokeSprite className="PokeSprite" pokemon={this.state.name}/>
             <div class="PokemonInfo-type-abilities-stats">
-            <PokemonStats stats={this.state.stats} />
-            <PokemonAbilities abilities={this.state.abilities} />          
-            <PokemonTypeList types={this.state.types} />
+                <PokemonStats stats={this.state.stats} />
+                <PokemonAbilities abilities={this.state.abilities} />          
+                <PokemonTypeList types={this.state.types} />
             </div>
-
         </div>    
     )    
   }
