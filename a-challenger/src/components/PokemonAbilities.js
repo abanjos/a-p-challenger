@@ -17,7 +17,7 @@ class PokemonAbilities extends Component {
     let pokemonAbilities = this.createPokemonAbilities()
 
     return (      
-      <div className="AbilitiesBox">
+      <div className="PokemonAbilities">
           <h3>Abilities: </h3>{pokemonAbilities}
       </div>
     );
