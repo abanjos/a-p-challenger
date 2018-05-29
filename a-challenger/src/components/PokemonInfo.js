@@ -50,14 +50,15 @@ class PokemonInfo extends Component {
         return (<div></div>)
         
     return ( 
-        <div>
-                <h2>#{this.state.number} {this.state.name.toUpperCase()}</h2>
-                <PokemonTypeList types={this.state.types} />
-                <div className="SpriteAbilityBox">
-                    <PokeSprite className="PokeSprite" pokemon={this.state.name}/>
-                    <PokemonAbilities className="PokemonAbilities" abilities={this.state.abilities} />
-                </div>            
-                <PokemonStats stats={this.state.stats} />
+        <div className="PokemonInfo">
+            <h2>#{this.state.number} {this.state.name.toUpperCase()}</h2>
+            <PokeSprite className="PokeSprite" pokemon={this.state.name}/>
+            <div class="PokemonInfo-type-abilities-stats">
+            <PokemonStats stats={this.state.stats} />
+            <PokemonAbilities abilities={this.state.abilities} />          
+            <PokemonTypeList types={this.state.types} />
+            </div>
+
         </div>    
     )    
   }

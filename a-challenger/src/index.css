@@ -14,11 +14,24 @@ html {
   height: 100%;
 }
 
-.App {
-  min-height: 100%;
+.PokemonInfo h2 {
+  text-align: center;
+}
+
+.PokeSprite {
+  margin:10px auto;
+  display: block;
+  max-width: 100%;
+}
+
+.PokemonAbilities {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.PokemonStats {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .PokemonStats-list {
@@ -215,6 +228,15 @@ html {
   #root {
     max-width: 992px;
     margin: 0 auto;
+  }
+  .App {
+    min-height: 100%;
+  }
+
+  .PokemonInfo-type-abilities-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
   }
   .Type {
     width: 180px;
