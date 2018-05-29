@@ -29,10 +29,16 @@ class PokemonStats extends Component {
 
   createPokemonStats(){
     return this.props.stats.map(stat => 
-      <li key={stat.stat.name}>{this.formatOutput(stat.stat.name)}:
+      <li key={stat.stat.name}>{this.formatOutput(stat.stat.name)}:&nbsp;
         <strong>{stat.base_stat}</strong>&nbsp;
-        <StatBar statValue={stat.base_stat} />
       </li>
+    )
+  }
+
+  
+  createStatBars(){
+    return this.props.stats.map(stat => 
+        <StatBar key={stat.stat.name} statValue={stat.base_stat} />
     )
   }
 
@@ -40,9 +46,12 @@ class PokemonStats extends Component {
 
     let pokemonStats = this.createPokemonStats()
 
+    let statBars = this.createStatBars()
+
     return (      
       <div className="PokemonStats">
         <ul className="PokemonStats-list">{pokemonStats}</ul>
+        <div className="">{statBars}</div>
       </div>
     );
   }

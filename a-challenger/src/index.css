@@ -21,6 +21,15 @@ html {
   grid-template-columns: 100%;
 }
 
+.PokemonStats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  text-align: right;
+  line-height: 17px;
+}
+
 .PokemonButton {
   border-radius: 50%;
   display: inline-block;
