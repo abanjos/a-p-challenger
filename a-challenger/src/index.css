@@ -27,6 +27,9 @@ html {
   width: 96px;
   height: 96px;
   margin: 3px;
+  text-align: center;
+  font-size: 10pt;
+  text-transform: uppercase;
 }
 
 /*TYPES*/

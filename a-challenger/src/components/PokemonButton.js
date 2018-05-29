@@ -44,6 +44,7 @@ class PokemonButton extends Component {
         className="PokemonButton" 
         onClick={(e) => this.handleClick(e)}>
           <img src={this.state.iconUrl} />
+          <span>{this.props.name}</span>
         </a>
     );
   }

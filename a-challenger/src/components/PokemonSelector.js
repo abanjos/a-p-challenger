@@ -30,7 +30,7 @@ class PokemonSelector extends Component {
 
   createPokemonButtons() {
     return this.state.list.map(pokemon =>
-      <PokemonButton key={pokemon.name} url={pokemon.url} /> 
+      <PokemonButton key={pokemon.name} url={pokemon.url} name={pokemon.name} /> 
     )
   }
 
@@ -57,7 +57,7 @@ class PokemonSelector extends Component {
     return (
       <div className="Pokemon-Selector">
         {pokemonButtons}
-        <div class="PaginationButtonGrid">
+        <div className="PaginationButtonGrid">
           <PaginationButton className="PaginationButtonPrevious" text="Previous" url={this.state.previous} onClickHandler={(e) => this.handlePreviuous(e)} />
           <PaginationButton className="PaginationButtonNext" text="Next" url={this.state.next} onClickHandler={(e) => this.handleNext(e)} />
         </div>
