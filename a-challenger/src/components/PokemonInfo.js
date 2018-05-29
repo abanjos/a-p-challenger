@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import PokemonTypeList from './PokemonTypeList'
 import PokemonStats from './PokemonStats'
 import PokeSprite from 'react-poke-sprites' 
+import PokemonAbilities from './PokemonAbilities'
 
 class PokemonInfo extends Component {
     constructor(props) {
@@ -48,14 +49,16 @@ class PokemonInfo extends Component {
     if(this.state.isLoading)
         return (<div></div>)
         
-    return (      
+    return ( 
         <div>
-            <h1>#{this.state.number} {this.state.name.toUpperCase()}</h1>
-            <PokemonTypeList types={this.state.types} />
-            <PokeSprite pokemon={this.state.name}/>
-            <PokemonStats stats={this.state.stats} />                
-            
-        </div>
+                <h2>#{this.state.number} {this.state.name.toUpperCase()}</h2>
+                <PokemonTypeList types={this.state.types} />
+                <div className="SpriteAbilityBox">
+                    <PokeSprite className="PokeSprite" pokemon={this.state.name}/>
+                    <PokemonAbilities className="PokemonAbilities" abilities={this.state.abilities} />
+                </div>            
+                <PokemonStats stats={this.state.stats} />
+        </div>    
     )    
   }
 }
